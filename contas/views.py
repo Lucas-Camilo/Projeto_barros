@@ -6,6 +6,6 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'contas/home.html')
 def registrar(request):
-    return render(request, ' contas/registrar.html')
+    return render(request, ' contas/registro.html')
 def login(request):
-    return render(request,'contas/login.html')
+    return render(request, 'contas/login.html')
