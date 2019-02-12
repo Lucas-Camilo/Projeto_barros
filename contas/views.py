@@ -8,4 +8,4 @@ def home(request):
 def login(request):
     return render(request, 'contas/login.html')
 def registrar(request):
-    return render(request, ' contas/registro.html')
+    return render(request, 'contas/registro.html')
