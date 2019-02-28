@@ -1,19 +1,22 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/home_style.css' %}"/>
 </head>
 <body>
-    <div><!--Botoes do topo-->
-        <label>
-            <button>Login</button>
-            <button>Cadastrar</button>
-        </label>
-    </div>
-    <h1>Instruçoes do jogo</h1>
-    <p> Abaixo segue as informações do jogo </p>
-    <p>Parece que nosso amigo não consegue segurar seu dinheiro, ajude-o a se manter
-    em pe sem deixar seu dinheiro cair </p>
+    <div class="lado_direito"> <!--Botoes do topo-->
+            <button name="login">Login</button>
+            <button name="cadastrar">Cadastrar</button>
+    </div> <!--Botoes do topo-->
+    <div> <!--Div de informacoes-->
+        <h1>Instruçoes do jogo</h1>
+        <p> Abaixo segue as informações do jogo </p>
+        <p>Parece que nosso amigo não consegue segurar seu dinheiro, ajude-o a se manter
+        em pe sem deixar seu dinheiro cair </p>
+    </div> <!--Div de informacoes-->
+
 </body>
 </html>
