@@ -1,5 +1,10 @@
-.lado_direito
+#divBoto
 {
 float: right;
 background-color: red;
+width:30%;
+}
+h1
+{
+color:blue;
 }
