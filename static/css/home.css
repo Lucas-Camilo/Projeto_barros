@@ -1,0 +1,24 @@
+#divBoto
+{
+    float: right;
+    background-color:black;
+    clear: both;
+    padding: 5px;
+    text-aligh:right
+}
+h1
+{
+color:blue;
+}
+.clearfix {
+overflow: auto;
+}
+.intruct
+{
+    float:left;
+
+}
+p
+{
+font-size:18px;
+}
