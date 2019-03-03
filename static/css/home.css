@@ -1,10 +1,9 @@
 #divBoto
 {
-    float: right;
     background-color: black;
     clear: both;
     padding: 5px;
-    text-aligh:right;
+    text-align:right;
 }
 h1
 {
@@ -26,4 +25,10 @@ body
     background-color:#6FB6FB;
     width:"100";
 	height:"100";
+}
+#imagem-config
+{
+    float: left;
+    clear: both;
+    text-align:left;
 }
