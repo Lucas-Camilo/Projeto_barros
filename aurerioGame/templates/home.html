@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
@@ -8,23 +8,25 @@
 </head>
 <body>
     <div id="divBoto"> <!--Botoes do topo-->
-            <button name="login">Login</button>
-            <button name="cadastrar">Cadastrar</button>
+        <form action="/contas/login/"><button name="login">Login</button></form>
+        <form action="/contas/registrar/"><button name="cadastrar">Cadastrar</button></form>
     </div> <!--Botoes do topo-->
     <div class="intruct">
         <h1>Instruçoes do jogo</h1>
     </div>
-    <div id="imagem-config">
+    <div id="imagem-config"> <!--Div com a imagem-->
         <figure>
             <img src="https://uploaddeimagens.com.br/images/001/937/639/full/all_imagens_aurerio.jpeg?1551635959">
             <figcaption>Imagem feita por <a href="https://www.facebook.com/TrafalgarElton">Elton Tafarel</a></figcaption>
         </figure>
-    </div>
+    </div> <!--Div com a imagem-->
     <div class="intruct"> <!--Div de informacoes-->
         <p>Parece que nosso amigo não consegue segurar seu dinheiro, ajude-o a se manter
         em pe sem deixar seu dinheiro cair.</p>
-        <p>Basta usar as teclas do teclado para mate-lo em seu equilibrio</p>
+        <p>Basta usar as setas do teclado para mate-lo em seu equilibrio
+            <br>direita para move-lo para a direita e esquerda para movelo para esquerda
+            <img src="{% static 'img/setas2.png' %}" alt="imagem das setas  "></p>
+        <p><a href="">Você consegue?</a></p>
     </div> <!--Div de informacoes-->
-
 </body>
 </html>
