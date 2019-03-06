@@ -23,7 +23,7 @@
 			objeto.addClass("Maior");
 		}
 
-		objeto.attr("src", "../sprites/"+sprite);
+		objeto.attr("src", "static/sprites/"+sprite);
 	}
 
 	function Rotacionar(objeto, grau){
@@ -93,8 +93,8 @@
 
 	
 
-	var background_sound = new Audio('../sounds/background.ogg');
-	var perdeu_sound = new Audio('sounds/perdeu.wav');
+	var background_sound = new Audio('static/sounds/background.ogg');
+	var perdeu_sound = new Audio('static/sounds/perdeu.wav');
 	background_sound.volume = 0.2;
 
 
