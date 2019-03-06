@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>Aurélio Adventure's</title>
+	<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'componentes/aurerio.css' %}">
+	<script type="text/javascript" src="{% static 'componentes/aurerio.js' %}"></script>
+</head>
+<body>
+
+	<div id="App">
+		<div id="Texto">Você salvou:</div>
+		<div id="Placar"></div>
+		
+			<div id="PerdeuDiv">
+			<div class="TituloPerdeu">Você Perdeu!</div>
+			<div class="TextoPerdeu">Não desista! <br> Ainda há tempo de salvar todo o dinheiro de sua família!</div>
+			
+			<div class="BotaoPlacar" onclick="parent.window.document.location.href = '';">Placar</div>
+			
+			<div class="BotaoJogar" onclick="parent.window.document.location.href = '';">Devolva meu dinheiro!</div>
+			</div>
+
+		<div id="PlayerDiv">
+			<img src="{% static 'sprites/aurerio-direita.png' %}" id="Player" class="Espelhou">
+		</div>
+		<div class="Chao"></div>
+	</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var ContadorPontos = window.setInterval('Timer()', 100);
+
+</script>
+

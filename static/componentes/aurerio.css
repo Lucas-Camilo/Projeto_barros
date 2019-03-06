@@ -1,0 +1,22 @@
+	@import url('https://fonts.googleapis.com/css?family=Lobster');
+	
+	body{text-align: center;  font-family: 'Lobster', cursive; margin: 0px; background-image: url('../sprites/background/background.png'); background-repeat: no-repeat; background-position: top center;  -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; overflow: hidden; } 
+
+	#App{ overflow: hidden; overflow-y: hidden; overflow-y: hidden; } 
+	#Player{width: 100%; position: absolute; margin-left: auto;margin-right: auto;left: 0;right: 0;  transform-origin: bottom; bottom: 0;   -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);}
+
+	.Chao{    width: 100%; background-image: url(../sprites/background/chao.png); height: 70px; background-repeat: no-repeat; position: absolute; bottom: -15px; z-index: -2; background-size: cover;}
+
+	#Placar{font-size: 80px; text-shadow: 0px 3px 0px red, 0px 10px 10px rgba(0,0,0,0.55), 0px 15px 2px rgba(0,0,0,0.1), 0px 34px 30px rgba(0,0,0,0.1); color: white; overflow: hidden; width: 100%; height: 140px;}
+	#Texto{font-size: 40px; width: 100%;  overflow: hidden;}
+	.Maior{width: 105% !important;}
+	.Perdeu{overflow: hidden;}
+	#PlayerDiv{width: 40%;  height: 200px;position: absolute; margin-left: auto;margin-right: auto;left: 0;right: 0; margin: auto; bottom:4%;}
+	
+	#PerdeuDiv{    width: calc(100% - 40px); height: 280px; font-size: 50px; background-color: #ffffff; margin: 20px; position: absolute; z-index: 2; top: 110px; border-radius: 10px; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); margin-top: -200%;}
+	.TituloPerdeu{font-size: 40px; width: 100%;}
+	.TextoPerdeu{font-size: 22px; width: calc(100% - 20px); color: #616161; padding: 10px;}
+	
+	.BotaoJogar{    width: calc(100% - 20px); height: 50px; font-size: 27px; line-height: 50px; background-color: #0bb900; border-radius: 10px; margin: 10px; color: white; 	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5); box-shadow:0 0 10px rgba(0, 0, 0, 0.5); position: absolute; bottom: 0px;}
+	.BotaoPlacar{    width: calc(100% - 20px); height: 50px; font-size: 27px; line-height: 50px; background-color: #5c0692; border-radius: 10px; margin: 10px; color: white; 	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5); box-shadow:0 0 10px rgba(0, 0, 0, 0.5); position: absolute; bottom: 60px;}
