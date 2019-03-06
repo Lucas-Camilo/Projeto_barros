@@ -45,9 +45,9 @@
 		perdeu = true
 		clearInterval(ContadorPontos)
 		if(grau > 0){
-			$("#Player").attr("src", "sprites/aurerio-pobre-direita2.png");
+			$("#Player").attr("src", "static/sprites/aurerio-pobre-direita2.png");
 		} else {
-			$("#Player").attr("src", "sprites/aurerio-pobre-esquerda2.png");
+			$("#Player").attr("src", "static/sprites/aurerio-pobre-esquerda2.png");
 		}
 		$("#Player").css('transform','rotate(0deg)')
 		$("#Player").addClass("Perdeu");
