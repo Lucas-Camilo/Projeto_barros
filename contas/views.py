@@ -14,7 +14,7 @@ def login(request):
     return render(request, 'contas/login.html')
 
 
-def registrar(request):
+def rankin(request):
     usuario = Usuario.objects.all().order_by('-pontuacao')
     return render(request, 'contas/registro.html', {"usuario": usuario})
 
