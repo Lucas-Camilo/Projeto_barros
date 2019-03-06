@@ -5,6 +5,15 @@
     <title>Login</title>
 </head>
 <body>
-
+    <form action="http://localhost:8000/contas/novo_usuario" method="get">
+        <label>Nome</label><br>
+        <input type="text" name="nome"><br>
+        <label>Pontuação</label><br>
+        <input type="text" name="pontuacao"><br>
+        <label>ID</label><br>
+        <input type="text" name="id_usuario" value="{{id}}"><br>
+        <br>
+        <button name="ok">Adcionar ao Banco</button>
+    </form>
 </body>
 </html>
