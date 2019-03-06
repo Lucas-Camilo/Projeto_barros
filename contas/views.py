@@ -11,8 +11,7 @@ def home(request):
 
 
 def login(request):
-    id_usuario = socket.gethostbyname(socket.gethostname())
-    return render(request, 'contas/login.html', {"id": id_usuario})
+    return render(request, 'contas/login.html')
 
 
 def registrar(request):
