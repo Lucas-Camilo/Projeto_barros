@@ -15,7 +15,7 @@ def login(request):
 
 
 def registrar(request):
-    usuario = Usuario.objects.all()
+    usuario = Usuario.objects.all().order_by('-pontuacao')
     return render(request, 'contas/registro.html', {"usuario": usuario})
 
 
@@ -27,8 +27,9 @@ def novo_usuario(request):
         usuario = Usuario.objects.filter(id_user=id_usuario)
         if len(usuario) == 0:
             Usuario.objects.create(nome=nome, pontuacao=pont, id_user=id_usuario)
-        elif (len(usuario) == 1):
-            Usuario.objects.filter(id_user=id_usuario).update(pontuacao=pont)
+        elif (len(usuario) == 1) and pont > usuario.pontuacao:
+            if pont > usuario.pontuacao:
+                Usuario.objects.filter(id_user=id_usuario).update(pontuacao=pont)
         else:
             nome = "{}({})".format(nome, len(usuario) + 1)
             Usuario.objects.create(nome=nome, pontuacao=pont, id_user=id_usuario)
