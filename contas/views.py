@@ -20,10 +20,10 @@ def rankin(request):
 def novo_usuario(request):
     nome = request.GET.get("nome")
     pont = request.GET.get("pontuacao")
-    id_usuario = int(request.GET.get("id_usuario"))
+    id_usuario = request.GET.get("id_usuario")
     try:
         all_usuarios = Usuario.objects.all().filter(id_user=id_usuario)
-        usuario = Usuario.objects.get(id_user=id_usuario)
+        usuario = Usuario.objects.get(id_user=str(id_usuario))
         if len(all_usuarios) == 0:
             Usuario.objects.create(nome=nome, pontuacao=pont, id_user=id_usuario)
         elif len(all_usuarios) == 1 and int(pont) > usuario.pontuacao:
