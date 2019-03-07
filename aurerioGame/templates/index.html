@@ -14,13 +14,25 @@
 	<div id="App">
 		<div id="Texto">Você salvou:</div>
 		<div id="Placar"></div>
-		
+
+            <div id="BemVindoDiv">
+				<div class="Mensagem">Atenção!</div>
+				<div class="AjudeAmigo">Nova Odessa está falindo! <br><br>Parece que nosso amigo não consegue segurar seu dinheiro, ajude-o a se manter em pé sem deixar seu dinheiro cair.</div>
+
+				<div class="nome">
+				    <input placeholder="Insira seu nome..." value="" class="InputNome InputNomeJogador" id="InputNome" type="text" name="nome_jogador">
+				</div>
+
+				<div class="BotaoJogar2" onclick="IniciarJogo()">Jogar!</div>
+			</div>
+
+
 			<div id="PerdeuDiv">
 			<div class="TituloPerdeu">Você Perdeu!</div>
 			<div class="TextoPerdeu">Não desista! <br> Ainda há tempo de salvar todo o dinheiro de sua família!</div>
-			
-			<div class="BotaoPlacar" onclick="parent.window.document.location.href = '';">Placar</div>
-			
+
+			<div class="BotaoPlacar" onclick="MostraPlacar()">Placar</div>
+
 			<div class="BotaoJogar" onclick="parent.window.document.location.href = '';">Devolva meu dinheiro!</div>
 			</div>
 
@@ -32,9 +44,4 @@
 
 </body>
 </html>
-
-<script type="text/javascript">
-	var ContadorPontos = window.setInterval('Timer()', 100);
-
-</script>
 
