@@ -147,7 +147,7 @@ function eraseCookie(name) {
             var NomeJogador = $("#InputNome").val()
 
             if (NomeJogador != ""){
-
+				$("#InputNome").focus()
                 setCookie('NomeJogador', NomeJogador, 3000)
                 if(getCookie('IdJogador') == null){
                     setCookie('IdJogador', Id_Jogador, 3000)
