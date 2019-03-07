@@ -1,6 +1,6 @@
 {% load staticfiles %}
     {% for usuario in usuario %}
         <div id="{{usuario.id_user}}" class="DivPontos">
-            <div class="UsuarioNomePontos">#{{forloop.couter}} - {{usuario.nome}} (R$ {{usuario.pontuacao}}) </div>
+            <div class="UsuarioNomePontos">#{{forloop.counter}} - {{usuario.nome}} (R$ {{usuario.pontuacao}}) </div>
         </div>
     {% endfor %}
