@@ -1,6 +1,6 @@
 {% load staticfiles %}
     {% for usuario in usuario %}
         <div id="{{usuario.id_user}}" class="DivPontos">
-            <div class="UsuarioNomePontos">{{usuario.nome}} (R$ {{usuario.pontuacao}}) </div>
+            <div class="UsuarioNomePontos">#{{num | add:1}} - {{usuario.nome}} (R$ {{usuario.pontuacao}}) </div>
         </div>
     {% endfor %}
