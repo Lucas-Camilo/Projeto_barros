@@ -105,10 +105,10 @@
     function AtualizaPontos(){
 
             var NomeJogador = getCookie('NomeJogador')
-
+            var IdJogador = getCookie('IdJogador')
           $.ajax({
             type: 'GET',
-            url: "/contas/novo_usuario?id_usuario=123&nome="+ NomeJogador +"&pontuacao="+ pontuacao,
+            url: "/contas/novo_usuario?id_usuario="+ IdJogador +"&nome="+ NomeJogador +"&pontuacao="+ pontuacao,
             success:function(data){
              console.log("Saved!")
             }
@@ -141,8 +141,18 @@ function eraseCookie(name) {
 
     function IniciarJogo(){
 
+            var data = new Date()
+
+            var Id_Jogador = (data.getDate() +""+ data.getDay()+""+data.getYear()+""+data.getMinutes()+""+data.getHours()+""+data.getSeconds()) + "42";
+
             var NomeJogador = $("#InputNome").val()
             setCookie('NomeJogador', NomeJogador, 3000)
+
+            if(getCookie('IdJogador') == null){
+                setCookie('IdJogador', Id_Jogador, 3000)
+            }
+
+
             $("#BemVindoDiv").hide();
         	ContarDinheiro('start');
         	 setTimeout(function(){ JogoIniciou = true }, 500);
@@ -156,6 +166,7 @@ $(function() {
 
     if(NomeJogadorCookie != null){
         $(".InputNomeJogador").val(NomeJogadorCookie)
+        $(".InputNomeJogador").hide()
         $(".InputNomeJogador").attr('disabled', 'true');
 
     }
@@ -170,5 +181,17 @@ function ContarDinheiro(acao){
 
 }
 
+
+function MostraPlacar(){
+         $.ajax({
+            type: 'GET',
+            url: "/contas/rank/",
+            success:function(data){
+            $("#PedeuDiv").css("height","400px");
+             $(".TextoPerdeu").empty()
+             $(".TextoPerdeu").append(data)
+            }
+        });
+}
 
 
