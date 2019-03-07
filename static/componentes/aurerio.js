@@ -166,8 +166,8 @@ $(function() {
 
     if(NomeJogadorCookie != null){
         $(".InputNomeJogador").val(NomeJogadorCookie)
-        $(".InputNomeJogador").hide()
-        $(".InputNomeJogador").attr('disabled', 'true');
+      //  $(".InputNomeJogador").hide()
+    //    $(".InputNomeJogador").attr('disabled', 'true');
 
     }
 });
@@ -187,7 +187,10 @@ function MostraPlacar(){
             type: 'GET',
             url: "/contas/rank/",
             success:function(data){
-            $("#PedeuDiv").css("height","400px");
+             $("#PerdeuDiv").css("height","400px");
+             $(".TextoPerdeu").css("height","200px");
+             $(".TextoPerdeu").css("overflow-y","scroll");
+
              $(".TextoPerdeu").empty()
              $(".TextoPerdeu").append(data)
             }
