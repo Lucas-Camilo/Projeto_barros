@@ -23,11 +23,12 @@ def novo_usuario(request):
     id_usuario = request.GET.get("id_usuario")
     try:
         all_usuarios = Usuario.objects.all().filter(id_user=id_usuario)
-        usuario = Usuario.objects.get(id_user=str(id_usuario))
         if len(all_usuarios) == 0:
             Usuario.objects.create(nome=nome, pontuacao=pont, id_user=id_usuario)
-        elif len(all_usuarios) == 1 and int(pont) > usuario.pontuacao:
-            Usuario.objects.filter(id_user=id_usuario).update(pontuacao=pont)
+        elif len(all_usuarios) == 1:
+            usuario = Usuario.objects.get(id_user=id_usuario)
+            if int(pont) > usuario.pontuacao:
+                Usuario.objects.filter(id_user=id_usuario).update(pontuacao=pont)
         else:
             nome = "{}({})".format(nome, len(all_usuarios) + 1)
             Usuario.objects.create(nome=nome, pontuacao=pont, id_user=id_usuario)
