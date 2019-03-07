@@ -142,21 +142,21 @@ function eraseCookie(name) {
     function IniciarJogo(){
 
             var data = new Date()
-
             var Id_Jogador = (data.getDate() +""+ data.getDay()+""+data.getYear()+""+data.getMinutes()+""+data.getHours()+""+data.getSeconds()) + "42";
 
             var NomeJogador = $("#InputNome").val()
-            setCookie('NomeJogador', NomeJogador, 3000)
 
-            if(getCookie('IdJogador') == null){
-                setCookie('IdJogador', Id_Jogador, 3000)
+            if (NomeJogador != ""){
+
+                setCookie('NomeJogador', NomeJogador, 3000)
+                if(getCookie('IdJogador') == null){
+                    setCookie('IdJogador', Id_Jogador, 3000)
+                }
+
+                $("#BemVindoDiv").hide();
+            	ContarDinheiro('start');
+            	 setTimeout(function(){ JogoIniciou = true }, 500);
             }
-
-
-            $("#BemVindoDiv").hide();
-        	ContarDinheiro('start');
-        	 setTimeout(function(){ JogoIniciou = true }, 500);
-
     }
 
 
