@@ -147,15 +147,17 @@ function eraseCookie(name) {
             var NomeJogador = $("#InputNome").val()
 
             if (NomeJogador != ""){
-				$("#InputNome").focus()
+
                 setCookie('NomeJogador', NomeJogador, 3000)
                 if(getCookie('IdJogador') == null){
                     setCookie('IdJogador', Id_Jogador, 3000)
                 }
 
                 $("#BemVindoDiv").hide();
-            	ContarDinheiro('start');
-            	 setTimeout(function(){ JogoIniciou = true }, 500);
+                ContarDinheiro('start');
+                 setTimeout(function(){ JogoIniciou = true }, 500);
+            } else {
+                 $("#InputNome").focus()
             }
     }
 
