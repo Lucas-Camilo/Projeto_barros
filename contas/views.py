@@ -20,7 +20,7 @@ def rankin(request):
 def novo_usuario(request):
     nome = request.GET.get("nome")
     pont = request.GET.get("pontuacao")
-    id_usuario = int(request.GET.get("id_usuario"))
+    id_usuario = str(request.GET.get("id_usuario"))
     try:
         all_usuarios = Usuario.objects.all().filter(id_user=id_usuario)
         usuario = Usuario.objects.get(id_user=id_usuario)
