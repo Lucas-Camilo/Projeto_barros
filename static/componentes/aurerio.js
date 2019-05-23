@@ -72,12 +72,13 @@
     	 window.ondevicemotion = function(e) {
     	 	if(perdeu == false){
     		  if (JogoIniciou == true){
+
     		    grau = (event.accelerationIncludingGravity.x * -1);
 
         		  if (grau > 0){
-        		  grau_atual = grau_atual + 1.5;
+        		  grau_atual = grau_atual + (1.5 + (pontuacao/1000));
         		  } else {
-        		  grau_atual = grau_atual - 1.5;
+        		  grau_atual = grau_atual - (1.5 + (pontuacao/1000));
         		  }
 
     		    Rotacionar('Player', grau_atual);
