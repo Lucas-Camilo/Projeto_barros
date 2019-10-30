@@ -69,23 +69,28 @@
 
 
     	 var grau_atual = 5;
-    	 window.ondevicemotion = function(e) {
-    	 	if(perdeu == false){
-    		  if (JogoIniciou == true){
 
-    		    grau = (event.accelerationIncludingGravity.x * -1);
+    var usuarioMove = window.confirm('Podemos utilizar seu sensor de movimento?')
 
-        		  if (grau > 0){
-        		  grau_atual = grau_atual + (1.5 + (pontuacao/1000));
-        		  } else {
-        		  grau_atual = grau_atual - (1.5 + (pontuacao/1000));
+    if(usuarioMove){
+    	     window.addEventListener('devicemotion', function(event) {
+        	 	if(perdeu == false){
+        		  if (JogoIniciou == true){
+
+        		    grau = (event.accelerationIncludingGravity.x * -1);
+
+            		  if (grau > 0){
+            		  grau_atual = grau_atual + (1.5 + (pontuacao/1000));
+            		  } else {
+            		  grau_atual = grau_atual - (1.5 + (pontuacao/1000));
+            		  }
+
+        		    Rotacionar('Player', grau_atual);
         		  }
+        		}
+        	 });
 
-    		    Rotacionar('Player', grau_atual);
-    		  }
-    		}
-    	 }
-
+    }
 
 
 	 pontuacao = 0;
